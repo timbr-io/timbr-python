@@ -11,6 +11,7 @@ except ImportError:
     ConfigManager = None
 
 extension_dir = os.path.join(os.path.dirname(__file__), "timbr", "static")
+client_extension_dir = os.path.join(os.path.dirname(__file__), "timbr", "nbextension", "timbr")
 
 class develop(_develop):
     try:
@@ -19,6 +20,8 @@ class develop(_develop):
             if install_nbextension is not None and ConfigManager is not None:
                 install_nbextension(extension_dir, symlink=True,
                                 overwrite=True, user=True, destination="timbr_machine")
+                install_nbextension(client_extension_dir, symlink=True,
+                                overwrite=True, user=True, destination="timbr")
                 cm = ConfigManager()
                 cm.update('notebook', {"load_extensions": {"timbr_machine/machine": True } })
     except:
@@ -50,9 +53,8 @@ setup(name='timbr',
         ]
       },
       data_files=[
-        ('share/jupyter/nbextensions/timbr_machine', [
-            'timbr/static/machine.js'
-        ]),
+        ('share/jupyter/nbextensions/timbr_machine', [ 'timbr/static/machine.js']),
+        ('share/jupyter/nbextensions/timbr', [ 'timbr/nbextension/timbr/timbr.js']),
       ],
       install_requires=[
           "pymongo>=2.8",
