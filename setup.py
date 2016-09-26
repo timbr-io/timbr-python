@@ -46,7 +46,7 @@ setup(name='timbr',
       zip_safe=False,
       entry_points = {
         'console_scripts': [
-          "timbr = timbr.client.util.cli:main"
+          "timbr = timbr.util.cli:main"
         ]
       },
       data_files=[

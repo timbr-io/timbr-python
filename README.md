@@ -67,11 +67,11 @@ The underlying processign topology is a kind of fat pipeline, enabling more comp
 
 
 
-# Timbr Client Notebook Extension
+# Timbr Notebook Extension
 
 ### Preparation:
 
-The Timbr notebook extension is hosted on [anaconda.org](https://anaconda.org/timbr-io/timbr-client) in the `timbr-io` channel, and is intended to be used with [Continuum.io's Anaconda Distribution](https://www.continuum.io/downloads) running Python 2.7.  To install it, first add the `timbr-io` channel to your conda search path using the following command.
+The Timbr notebook extension is hosted on [anaconda.org](https://anaconda.org/timbr-io/timbr) in the `timbr-io` channel, and is intended to be used with [Continuum.io's Anaconda Distribution](https://www.continuum.io/downloads) running Python 2.7.  To install it, first add the `timbr-io` channel to your conda search path using the following command.
 
 ```bash
 $ conda config --add channels timbr-io
@@ -89,13 +89,13 @@ You are now ready to install the notebook extension.
 
 ### Installation:
 
-The Timbr notebook extension is packaged with the `timbr-client` conda package. Packages are currently available for Python 2.7 on `linux-64` and `osx-64` platforms.  To install the `timbr-client` open a terminal with your desired conda environment activated and and run the following command.
+The Timbr notebook extension is packaged with the `timbr` conda package. Packages are currently available for Python 2.7 on `linux-64` and `osx-64` platforms.  To install the `timbr` open a terminal with your desired conda environment activated and and run the following command.
 
 ```bash
-(timbr) $ conda install timbr-client
+(timbr) $ conda install timbr
 ```
 
-After the Timbr client is installed you’ll want to direct the timbr-client to the proper private hosted instance. Again, from your terminal run the following command.
+After Timbr is installed you’ll want to direct the timbr to the proper private hosted instance. Again, from your terminal run the following command.
 
 ```bash
 (timbr) $ export TIMBR_HOST=<your-timbr-instance>.timbr.io
@@ -108,7 +108,7 @@ It may be convenient to add this line to your `.profile` or `.bashrc`.  Now you 
 (timbr) $ jupyter notebook
 ```
 
-When you run your Jupyter notebook from the environment where `timbr-client` is installed it will automatically appear when you open your notebook, allowing you to search for both data, transforms, and analysis from your notebook.
+When you run your Jupyter notebook from the environment where `timbr` is installed it will automatically appear when you open your notebook, allowing you to search for both data, transforms, and analysis from your notebook.
 
 ### Usage
 
