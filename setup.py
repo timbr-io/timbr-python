@@ -51,7 +51,7 @@ setup(name='timbr',
       },
       data_files=[
         ('share/jupyter/nbextensions/timbr_machine', [
-            'timbr/static/index.js'
+            'timbr/static/machine.js'
         ]),
       ],
       install_requires=[
