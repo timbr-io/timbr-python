@@ -12,6 +12,7 @@ requirements:
     - setuptools
     - dask
     - ipython
+    - numpy 
     - pymongo >=2.8
     - python >=2.7.10
     - cython >=0.22
@@ -25,6 +26,7 @@ requirements:
   run:
     - dask
     - ipython
+    - numpy
     - pymongo >=2.8
     - python >=2.7.10
     - pymongo >=2.8

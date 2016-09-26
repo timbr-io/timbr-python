@@ -30,7 +30,7 @@ class install(_install):
             _install.run(self)
             if install_nbextension is not None and ConfigManager is not None:
                 cm = ConfigManager()
-                cm.update('notebook', {"load_extensions": {"timbr_machine/index": True } })
+                cm.update('notebook', {"load_extensions": {"timbr_machine/machine": True } })
     except:
         pass
 
@@ -58,6 +58,7 @@ setup(name='timbr',
           "pymongo>=2.8",
           "dask",
           "ipython",
+          "numpy",
           "observed",
           "jupyter_react",
           "simplejson>=3.6.5",
