@@ -1,0 +1,41 @@
+package:
+  name: timbr
+  version: 0.0.1
+
+build:
+  number: 0
+  entry_points:
+    - timbr = timbr.client.util.cli:main
+
+requirements:
+  build:
+    - setuptools
+    - dask
+    - ipython
+    - pymongo >=2.8
+    - python >=2.7.10
+    - cython >=0.22
+    - msgpack-python >=0.4.6
+    - simplejson >=3.6.5
+    - jsonpath-rw >=1.4.0
+    - pytables >=3.2.1.1
+    - argh >=0.26.1
+    - decorator >=4.0.6
+
+  run:
+    - dask
+    - ipython
+    - pymongo >=2.8
+    - python >=2.7.10
+    - pymongo >=2.8
+    - cython >=0.22
+    - msgpack-python >=0.4.6
+    - simplejson >=3.6.5
+    - jsonpath-rw >=1.4.0
+    - pytables >=3.2.1.1
+    - argh >=0.26.1
+    - decorator >=4.0.6
+
+about:
+  home: https://bitbucket.org/timbr-io/timbr-machine
+  license: MIT

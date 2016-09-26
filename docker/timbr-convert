@@ -1,0 +1,21 @@
+FROM ubuntu:xenial
+MAINTAINER Chris Helm <chelm@timbr.io>
+
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu xenial main universe" > /etc/apt/sources.list
+RUN apt-get update
+RUN apt-get upgrade -y
+
+RUN apt-get install -y wget bzip2 
+
+RUN wget --no-verbose http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
+RUN bash Miniconda-latest-Linux-x86_64.sh -p /miniconda -b
+RUN rm Miniconda-latest-Linux-x86_64.sh
+
+RUN /miniconda/bin/conda config --add channels timbr-io
+RUN /miniconda/bin/conda install timbr-client -y
+
+# LOCAL ONLY
+COPY timbr-client-0.5-4.tar.bz2 /root/timbr-client-0.5-4.tar.bz2
+RUN /miniconda/bin/conda install /root/timbr-client-0.5-4.tar.bz2 -y
+
+ENTRYPOINT ["/miniconda/bin/timbr", "convert"]

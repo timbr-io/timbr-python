@@ -1,0 +1,1 @@
+jupyter nbextension disable timbr
