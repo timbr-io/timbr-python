@@ -39,7 +39,7 @@ class install(_install):
 
 setup(name='timbr',
       cmdclass={'develop': develop, 'install': install},
-      version='0.0.1',
+      version='0.0.2',
       description='Dask-based data collection and processing machines, snapshot datastores, and a jupyter notebook extension',
       url='https://github.com/timbr-io/timbr-python',
       author='Pramukta Kumar',
